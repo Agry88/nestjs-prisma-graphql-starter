@@ -18,6 +18,7 @@ import { GqlConfigService } from './gql-config.service';
     PrismaModule.forRoot({
       isGlobal: true,
       prismaServiceOptions: {
+        explicitConnect: true,
         middlewares: [
           // configure your prisma middleware
           loggingMiddleware({
